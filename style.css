@@ -1,0 +1,728 @@
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3502px;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Montserrat Alternates", sans-serif;
+    
+
+}
+
+
+header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 2000;
+}
+
+.navbar, .nav-cont {
+    width: 100%;
+    height: 80px;
+    user-select: none;
+}
+
+.navbar {
+    background: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg img {
+    width: 100vw;
+    background: #EEEEEE;
+}
+
+.bg {
+    position: absolute;
+    z-index: -1000;
+    max-height: 3422px;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1090px;
+    width: 100vw;
+    background: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    height: 220px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-nav {
+    height: 39px;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns, .main-btns, .dropdown-btn span, .dropdown-btn{
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-btn span {
+    margin-left: 8px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.main-btns .btns {
+    gap: 50px;
+    font-size: 12px;
+}
+
+.logo {
+    margin-right: 81px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 100px;
+    transition: 0.4s;
+}
+
+.thumb {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+    border: black solid 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+.theme-switch input:checked + .slider .thumb .sun-icon{
+    display: none;
+}
+
+.theme-switch input:checked + .slider .thumb .moon-icon{
+    display: block;
+}
+
+.theme-switch input:checked + .slider .thumb{
+    transform: translateX(20px);
+    background: #000;
+}
+
+.secondary {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 50px;
+}
+
+.contacts ul {
+    list-style: none;
+    font-size: 12px;
+}
+
+footer .email p {
+    font-size: 7px;
+}
+
+input[type='text'], input[type='number'] {
+    width: auto;
+    height: 35px;
+    border-radius: 1000px;
+    border: none;
+    padding: 10px;
+    background: rgba(215, 215, 215, 1);
+    margin-right: 36px;
+    box-sizing: border-box;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.email .input-field input:focus {
+    border: none
+}
+
+.standart-btn {
+    width: auto;
+    height: 35px;
+    border-radius: 100px;
+    border: none;
+    padding: 10px;
+    font-family: "Montserrat Alternates", sans-serif;
+    background: #000;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-window {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    width: 575px;
+    height: 315px;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 46px;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.popup-container.opened {
+    display: flex;
+}
+
+.popup-window .text-parag {
+    margin-top: 0;
+    margin-bottom: 42px;
+}
+
+.popup-window input, .popup-window button{
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.button-container p {
+    margin: 0;
+}
+
+.svg-bg {
+    position: absolute;
+}
+
+.svg-cross {
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.svg-sword {
+    left: 41px;
+    bottom: 132px;
+}
+
+.svg-puzzle {
+    left: 85px;
+    bottom: 55px;
+}
+
+.svg-xo {
+    right: 85px;
+    bottom: 55px;
+}
+
+.svg-game {
+    right: 40px;
+    bottom: 132px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background: white;
+    width: 160px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    left: -30px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity ease 0.5s, transform ease 0.5s;
+}
+
+.dropdown-menu a {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.dropdown-menu a:hover {
+    background: rgba(241, 241, 241, 1);
+}
+
+.dropdown-menu.open {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    padding: 36px 0 0 0;
+    font-size: clamp(18px, 1.5rem, 5vw);
+    font-weight: normal;
+    margin: 0;
+}
+
+hr {
+    width: min(536px, 90%);
+    border: #000 1px solid;
+    margin: 36px 0;
+    padding: 0;
+}
+
+.search-type {
+    width: min-content;
+    height: 35px;
+    padding: 10px;
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    margin: 0;
+}
+
+.search-btn {
+    height: 35px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: none;
+    padding: 10px;
+    font-family: "Montserrat Alternates", sans-serif;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    margin-left: -40px;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin: 0 0 36px 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+.searchInput {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    height: fit-content;
+}
+
+.input-and-output {
+    display: flex;
+}
+
+.guess-num .input-and-output p, .year .input-and-output p {
+    width: 225px;
+    text-align: center;
+}
+
+
+.guess-num .input-and-output, .year .input-and-output {
+    gap: 10vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.output {
+    font-size: 12px;
+}
+
+.output.pos {
+    background: rgba(3, 153, 0, 1);
+}
+
+.output.neg {
+    background: rgba(153, 0, 0, 1);
+}
+
+.btns-choice input[type="radio"] {
+  display: none;
+}
+
+.rpc-btn {
+    display: flex;
+    gap: 38px;
+}
+
+.btn-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color ease 0.5s;
+}
+
+.rpc-btn input:checked + .btn-radio {
+    background-color: rgba(70, 70, 70, 1);
+}
+
+.rpc-result {
+    margin: 36px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 720px;
+}
+
+.score p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.score {
+    position: absolute;
+    right: -200px;
+    top: 0;
+}
+
+.calc-result {
+    padding: 20px;
+    background: rgba(215, 215, 215, 1);
+    color: rgba(126, 126, 126, 1);
+    border-radius: 100px;
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.calc-result.hasResult {
+    color: #000;
+}
+
+.calculator .input-and-output {
+    align-items: center;
+    display: flex;
+    gap: 36px;
+}
+
+.calculator .input-and-output .action {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 10px;
+
+}
+
+.input-and-output .action div input[type='radio'] {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.input-and-output .action label {
+    width: 35px;
+    height: 35px;
+    background: #000;
+    color: white;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background ease 0.5s;
+}
+
+.calculator .input-and-output input {
+    margin: 0;
+}
+
+.action input:checked + label {
+    background: rgb(70, 70, 70);
+}
+
+.circle-bg {
+    width: 35px;
+    height: 35px;
+    background: #000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dotted-line {
+    width: 100px;
+    height: 0;
+    border: 1px black dashed;
+}
+
+.date-calc .input-and-output {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.iframe-wrapper {
+    width: 620px;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+}
+
+.iframe-wrapper iframe {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    
+    top: -113px;
+    left: -190px;
+}
+
+.football-frame {
+    width: 720px;
+    aspect-ratio: 36 / 11;
+    min-height: 120px;
+    background: rgba(90, 187, 88, 1);
+    border: 2px solid black;
+    border-radius: 37px;
+    position: relative;
+    cursor: none;
+}
+
+.ball {
+    position: absolute;
+    top: 30%;
+    left: 80px;
+}
+
+.cursor {
+    position: absolute;
+    pointer-events: none;
+}
+
+.cursor.hidden {
+    display: none;
+}
+
+.greatest-number .input-and-output {
+    display: flex;
+    align-items: center;
+}
+
+.greatest-number p {
+    font-size: 12px;
+}
+
+.our-team {
+    width: 906px;
+}
+
+.inner-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main-image-container {
+    width: 806px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.image-div {
+    width: 150px;
+    height: 150px;
+    background: rgba(217, 217, 217, 1);
+    border-radius: 20px;
+}
+
+.student-info {
+    min-width: 150px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.student-name {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.student-desc {
+    font-size: 12px;
+}
+
+
+.scientist-div {
+    width: 100px;
+    height: 100px;
+    background: rgba(217, 217, 217, 1);
+    border-radius: 20px;
+}
+
+.grid-list {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    gap: 60px;
+}
+
+.sorting-div {
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+    margin: 0 36px 20px 0;
+    width: fit-content;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
+.sorting {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.box-shadowing {
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.box-shadowing-for-inputs {
+    position: relative;
+}
+
+.slider-visual {
+    display: flex;
+    align-items: center;
+    height: 3px;
+    justify-content: center;
+    gap: 6px;
+}
+
+.slide {
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 1);
+    overflow: hidden;
+    transition: width 0.2s ease
+}
+
+@keyframes slidebar-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.slide .process-bar {
+    width: 0%;
+    height: 100%;
+    background: rgba(121, 121, 121, 1);
+    
+}
+
+.slide.current-slide .process-bar {
+    width: 100%;
+    animation: slidebar-animation 10s linear infinite;
+}
+
+.slide.current-slide {
+    width: 30px;
+}
