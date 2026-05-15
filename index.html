@@ -212,7 +212,7 @@
         </div>
         <hr>
 
-        <div class="game">
+        <div class="game rps">
             <h3>Камінь - ножиці - папір</h3>
             <div class="btns-choice">
                 <div class="rpc-btn">
@@ -267,7 +267,7 @@
             <div class="score">
                 <p>Рахунок:</p>
                 <p>Комп’ютер - <span class="computerScore">0</span></p>
-                <p class="yourScore">Ви - 0</p>
+                <p>Ви - <span class="yourScore">0</span></p>
             </div>
         </div>
         <hr>
@@ -278,7 +278,7 @@
                 <input class="box-shadowing" type="number" id="number1" placeholder="Введіть число">
                 <div class="action">
                         <div class="addition">
-                            <input type="radio" value="add" id="add" name="calculatorAct" id="addAct">
+                            <input type="radio" id="add" value="add" name="calculatorAct" id="addAct">
                             <label class="box-shadowing" for="add">+</label>
                         </div>
                         <div class="subtraction">
@@ -374,13 +374,76 @@
                         <path d="M50.7071 0.353516L0.707095 50.3535L50.7071 100.354" stroke="black"/>
                     </svg>
                 </button>
-                <div class="main-image-container">
-                    <div class="student-info">
-                        <div class="image-div"></div>
-                        <p class="student-name">Ім’я студента</p>
-                        <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                <ul class="our-team-list item-1">
+                    <div class="our-team-list-cont">
+                                            <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">1</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">2</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">3</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">4</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">5</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">6</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-list-item">
+                        <div class="main-image-container">
+                            <div class="student-info">
+                                <div class="image-div">7</div>
+                                <p class="student-name">Ім’я студента</p>
+                                <p class="student-desc">Інформація про роботу, яку він/вона виконав/ла</p>
+                            </div>
+                        </div>
+                    </li>
                     </div>
-                </div>
+                </ul>
+                
+
+
                 <button class="arrow-btn next">
                     <svg width="52" height="101" viewBox="0 0 52 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.353546 0.353516L50.3535 50.3535L0.353546 100.354" stroke="black"/>
@@ -416,15 +479,18 @@
                 <div class="scientist-div"></div>
             </div>
             <div class="sorting">
-                <div class="sorting-div box-shadowing">Які вчені народилися в 19 ст.</div>
-                <div class="sorting-div box-shadowing">Знайти рік народження Albert Einshtein</div>
-                <div class="sorting-div box-shadowing">Відсортувати вчених за алфавітом</div>
-                <div class="sorting-div box-shadowing">Знайти вчених, прізвища яких починаються на на літеру “С” </div>
-                <div class="sorting-div box-shadowing">Відсортувати вчених за кількістю прожитих років</div>
-                <div class="sorting-div box-shadowing">Видалити всіх вчених, ім’я яких починається на “А”</div>
-                <div class="sorting-div box-shadowing">Знайти вченого, який народився найпізніше</div>
-                <div class="sorting-div box-shadowing">Знайти вченого, який прожив найдовше і вченого, який прожив найменше</div>
-                <div class="sorting-div box-shadowing">Знайти вчених, в яких співпадають перші літери імені і прізвища</div>
+                <div class="sorting-div box-shadowing" id="task1">Які вчені народилися в 19 ст.</div>
+                <div class="sorting-div box-shadowing" id="task2">Знайти рік народження Albert Einshtein</div>
+                <div class="sorting-div box-shadowing" id="task3">Відсортувати вчених за алфавітом</div>
+                <div class="sorting-div box-shadowing" id="task4">Знайти вчених, прізвища яких починаються на літеру “С”</div>
+                <div class="sorting-div box-shadowing" id="task5">Відсортувати вчених за кількістю прожитих років</div>
+                <div class="sorting-div box-shadowing" id="task6">Видалити всіх вчених, ім’я яких починається на “А”</div>
+                <div class="sorting-div box-shadowing" id="task7">Знайти вченого, який народився найпізніше</div>
+                <div class="sorting-div box-shadowing" id="task8">Знайти вченого, який прожив найдовше і вченого, який прожив найменше</div>
+                <div class="sorting-div box-shadowing" id="task9">Знайти вчених, в яких співпадають перші літери імені і прізвища</div>
+                <div class="sorting-div box-shadowing" id="task10">Знайти загальну кількість років, прожитих всіма вченими</div>
+                <div class="sorting-div box-shadowing" id="task11">Видалити вчених, які народилися в 15, 16 або 17 століттях</div>
+                <div class="sorting-div box-shadowing" id="task12">З'ясувати, чи всі вчені працювали в 19 столітті</div>
             </div>
         </div>
     </div>
@@ -476,6 +542,7 @@
         </div>
     </footer>
 
+    <script src="./scientists.js"></script>
     <script src="./script.js"></script>
 </body>
 
